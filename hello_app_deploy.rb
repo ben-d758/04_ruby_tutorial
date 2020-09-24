@@ -5,7 +5,6 @@ get '/' do
                 "Thursday", "Friday", "Saturday"]
     dayname = DAYNAMES[Time.now.wday]
     "Hello, world! Happy #{dayname}."
-  end
+end
 
 
-  
