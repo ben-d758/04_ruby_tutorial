@@ -17,8 +17,8 @@ moon_landing = Time.new(1969, 7, 20, 20, 17, 40)
 # puts now - moon_landing
 
 # DAYNAMES = Date::DAYNAMES
-DAYNAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-puts DAYNAMES[moon_landing.wday]
-puts DAYNAMES[Time.now.wday]
+# DAYNAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+# puts DAYNAMES[moon_landing.wday]
+# puts DAYNAMES[Time.now.wday]
 
-
+puts now
