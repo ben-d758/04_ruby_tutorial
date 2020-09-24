@@ -16,8 +16,18 @@ user = { :name => "Michael", :email => "michael@example.com"}
 user = { name: "Michael", email: "michael@example.com"} # "name:" has no meaning by itself
 # ":name =>" and "name:" are only the same in hashes
 
-puts user[:email] # michael@example.com
+user[:email] # michael@example.com
 
 # puts user[:password] # nil
+
+
+# ===========================
+# NESTED HASHES
+
+params = {}
+params[:user] = { name: "Michael", email: "mhartl@example.com" }
+
+params[:user] # {:name=>"Michael", :email=>"mhartl@example.com"}
+puts params[:user][:email] # mhartl@example.com
 
 
