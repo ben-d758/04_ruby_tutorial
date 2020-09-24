@@ -6,3 +6,6 @@ get '/' do
     dayname = DAYNAMES[Time.now.wday]
     "Hello, world! Happy #{dayname}."
   end
+
+
+  
