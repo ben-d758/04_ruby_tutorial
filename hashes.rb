@@ -31,3 +31,4 @@ params[:user] # {:name=>"Michael", :email=>"mhartl@example.com"}
 puts params[:user][:email] # mhartl@example.com
 
 
+
