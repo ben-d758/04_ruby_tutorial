@@ -10,4 +10,4 @@ def square_number(num)
     num*num
 end
 
-puts square_number(12)
+square_number(12)
