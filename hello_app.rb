@@ -1,5 +1,5 @@
 require 'sinatra'
-load 'functions_blocks/day.rb'
+require_relative './functions_blocks/day'
 
 get '/' do
     "Hello, world! Happy #{day_of_the_week(Time.now)}—now from a file!"
