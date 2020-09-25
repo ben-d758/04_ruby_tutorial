@@ -51,6 +51,7 @@ But bears it out even to the edge of doom.
   I never writ, nor no man ever loved."
 
 p sonnet.split(/\n/)
+sonnet.split(/\n/).length # 14
 
 
 
