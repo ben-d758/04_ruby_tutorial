@@ -18,7 +18,7 @@ user = { name: "Michael", email: "michael@example.com"} # "name:" has no meaning
 
 user[:email] # michael@example.com
 
-# puts user[:password] # nil
+user[:password] # nil
 
 
 # ===========================
@@ -28,7 +28,20 @@ params = {}
 params[:user] = { name: "Michael", email: "mhartl@example.com" }
 
 params[:user] # {:name=>"Michael", :email=>"mhartl@example.com"}
-puts params[:user][:email] # mhartl@example.com
+params[:user][:email] # mhartl@example.com
 
 
+# ===========================
+# HASH ITERATION
 
+
+flash = { success: "It worked!", danger: "It failed." }
+flash # {:success=>"It worked!", :danger=>"It failed."}
+
+# flash.each do |key,value|
+#     puts "key #{key.inspect} has a value of #{value.inspect}"
+# end
+
+user = {name: "John", password: "Krasinski", password_confirmation: "Krasinski"}
+
+puts "password matches" if user[:password] == user[:password_confirmation]
