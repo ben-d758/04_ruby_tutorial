@@ -24,3 +24,6 @@ tag("p", "this is a test for a paragraph tag") do |markup|
     puts markup
 end
 
+99.downto(2) { |n| puts n, "bottles of beer on the wall" }
+# puts "1 bottle of beer on the wall"
+
