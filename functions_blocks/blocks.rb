@@ -13,3 +13,14 @@ sandwich do
     puts "lettuce, tomato, cheese"
 end
 
+def tag(tagname, text)
+    html = "<#{tagname}>#{text}<#{tagname}>"
+    yield html
+end
+
+# wrap some text in a paragaph tag
+
+tag("p", "this is a test for a paragraph tag") do |markup|
+    puts markup
+end
+
