@@ -25,3 +25,9 @@ end
 functional_url(states)
 # ["https://example.com/kansas", "https://example.com/nebraska", "https://example.com/north-dakota", "https://example.com/south-dakota"]
 
+# Create function to handle method chaining
+
+def urlify(string)
+    string.downcase.split.join("-")
+end
+
