@@ -40,3 +40,10 @@ end
 
 functional_urls(states) # ["kansas", "nebraska", "north-dakota", "south-dakota"]
 
+# Final refactor, factor method chain above into separate aux fucntion
+
+def urlify(string)
+    string.downcase.split.join("-")
+end
+
+
