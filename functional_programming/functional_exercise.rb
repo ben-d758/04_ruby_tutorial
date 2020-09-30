@@ -44,3 +44,11 @@ end
 imperative_url_urlify(states)
 # ["https://example.com/kansas", "https://example.com/nebraska", "https://example.com/north-dakota", "https://example.com/south-dakota"]
 
+# Using urlify with FUNCTIONAL version
+
+def functional_url_urlify(states)
+    states.map { |state| "https://example.com/#{urlify(state)}" }
+end
+
+functional_url_urlify(states)
+# ["https://example.com/kansas", "https://example.com/nebraska", "https://example.com/north-dakota", "https://example.com/south-dakota"]
