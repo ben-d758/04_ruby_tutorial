@@ -31,3 +31,16 @@ def urlify(string)
     string.downcase.split.join("-")
 end
 
+# Using urlify with IMPERATIVE version
+
+def imperative_url_urlify(states)
+    urls = []
+    states.each do |state|
+        urls << "https://example.com/#{urlify(state)}"
+    end
+    urls
+end
+
+imperative_url_urlify(states)
+# ["https://example.com/kansas", "https://example.com/nebraska", "https://example.com/north-dakota", "https://example.com/south-dakota"]
+
