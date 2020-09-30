@@ -46,4 +46,17 @@ def urlify(string)
     string.downcase.split.join("-")
 end
 
+# Imperative version
+states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
+
+def imperative_urls(states)
+    urls = []
+    states.each do |state|
+        urls << urlify(state)
+    end
+    urls
+end
+
+imperative_urls(states).inspect # ["kansas", "nebraska", "north-dakota", "south-dakota"]
+
 
