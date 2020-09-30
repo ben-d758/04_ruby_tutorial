@@ -16,4 +16,12 @@ end
 imperative_url(states)
 # ["https://example.com/kansas", "https://example.com/nebraska", "https://example.com/north-dakota", "https://example.com/south-dakota"]
 
+# Functional version
+
+def functional_url(states)
+    states.map { |state| "https://example.com/#{state.downcase.split.join("-")}" }
+end
+
+functional_url(states)
+# ["https://example.com/kansas", "https://example.com/nebraska", "https://example.com/north-dakota", "https://example.com/south-dakota"]
 
