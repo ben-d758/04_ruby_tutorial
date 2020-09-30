@@ -27,3 +27,16 @@ squared_nums # [1, 4, 9, 16]
 lowercase_names = ["ALICE", "BOB", "CHARLIE"].map { |name| name.downcase }
 lowercase_names # ["alice", "bob", "charlie"]
 
+# Using 'Map' to achieve same result as 'imperative_urls' method
+
+states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
+states.map { |state| state.downcase.split.join("-") }
+
+# Functional version
+    
+def functional_urls(states)
+    states.map { |state| state.downcase.split.join("-") }
+end
+
+functional_urls(states) # ["kansas", "nebraska", "north-dakota", "south-dakota"]
+
