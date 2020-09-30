@@ -59,4 +59,12 @@ end
 
 imperative_urls(states).inspect # ["kansas", "nebraska", "north-dakota", "south-dakota"]
 
+# Functional version
+
+def functional_urls(states)
+    states.map { |state| urlify(state) }
+end
+
+puts functional_urls(states).inspect # "kansas", "nebraska", "north-dakota", "south-dakota"]
+
 
