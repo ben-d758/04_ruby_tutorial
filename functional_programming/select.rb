@@ -12,4 +12,12 @@ def imperative_singles(states)
     single_words
 end
 
-p imperative_singles(states)
+imperative_singles(states) # ["Kansas", "Nebraska"]
+
+# Functional solution using 'filter'
+
+def functional_singles(states)
+    states.select { |state| state.split.length == 1 }
+end
+
+functional_singles(states) # ["Kansas", "Nebraska"]
