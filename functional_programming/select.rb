@@ -33,4 +33,17 @@ functional_singles(states) # ["Kansas", "Nebraska"]
 
 # Using range and "symbol-to-proc" notation
 
-p (1..8).select(&:even?) # [2, 4, 6, 8]
+(1..8).select(&:even?) # [2, 4, 6, 8]
+
+# Exercises
+
+states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
+
+# 1. Selecting states that include "Dakota"
+
+states.select { |state| state.include? "Dakota" } # ["North Dakota", "South Dakota"]
+
+# 2. Selecting the Dakota states by length of split array being 2
+
+states.select { |state| state.split.length == 2 } # ["North Dakota", "South Dakota"]
+
