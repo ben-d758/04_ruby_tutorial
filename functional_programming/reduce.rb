@@ -30,4 +30,34 @@ end
 
 functional_sum(numbers) # 55
 
+# EXAMPLE 2
+# Using reduce to set the lengths of each state name as the value of each key (state name)
+states = ["Kansas", "Nebraska", "North Dakota", "South Dakota"]
 
+# lengths: Imperative version
+def imperative_lengths(states)
+    lengths = {}
+    states.each do |state|
+        lengths[state] = state.length
+    end
+    lengths    
+end
+
+imperative_lengths(states) # {"Kansas"=>6, "Nebraska"=>8, "North Dakota"=>12, "South Dakota"=>12}
+
+# Using 'reduce', the initial value passed in is "{}". So it becomes ".reduce({})"
+# lengths: Functional version
+
+def functional_lengths(states)
+    states.reduce({}) do |lengths, state|
+        lengths[state] = state.length
+        lengths
+    end
+end
+
+functional_lengths(states) # {"Kansas"=>6, "Nebraska"=>8, "North Dakota"=>12, "South Dakota"=>12}
+
+# Using the merge method to compress code above to a single line
+
+states.reduce({}) { |lengths, state| lengths.merge({state => state.length}) }
+# {"Kansas"=>6, "Nebraska"=>8, "North Dakota"=>12, "South Dakota"=>12}
