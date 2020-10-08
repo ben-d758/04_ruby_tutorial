@@ -15,8 +15,8 @@ class Phrase
     end
 end
 
-# phrase = Phrase.new("Racecar")
-# puts phrase.palindrome? # true
+phrase = Phrase.new("Racecar")
+puts phrase.palindrome? # true
 
 p = Phrase.new("yo adrian!")
-puts p.louder
+puts p.louder # "YO ADRIAN!"
